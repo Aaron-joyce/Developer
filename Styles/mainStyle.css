@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Globas CSS */
+:root{
+    --mianCol:#26547C;
+    --lightFontCol:#FFFaf3;
+    --altFontCol:#101010;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 10px;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* -----Global selectors----- */
+h1{
+    font-size: 12rem;
+    font-weight: 1000;
+    letter-spacing: .1rem;
+}
+h2{
+    font-size: 6rem;
+    font-weight: 800;
+}
+h3{
+    font-size: 4.2rem;
+    font-weight: 600;  
+}
+h4{
+    font-size: 3.2rem;
+}
+/* ------------------------ */
+
+/* -----NavBar section----- */
+nav{
+    display: flex;
+    justify-content: center;
+}
+.navbar.sticking{
+    position: fixed;
+    transition: all .1s;
+    width: 20%;
+    margin-top: 2rem;
+    justify-content: space-around;
+    border-radius: 10rem;
+    gap: 0;
+    background-color: #1f1f1ff1;
+}
+.navbar{
+    height: 7rem;
+    width: 100%;
+    background-color: #1f1f1f;
+    display: flex;
+    gap: 5rem;
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transition: all .1s;
+    
+    a{
+        color: #FFF6EB;
+        text-decoration: none;
+        
+    }
+    .ph-light{
+        font-size: 2.8rem;
+    }
+    .ph-light:hover{
+        font-size: 3rem;
+    }
+}
+
+/* -----Hero section----- */
+.hero-section{
+    margin-top: 2rem;
+    padding:0 5rem;
+    height: 97svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mianCol);
+    color: var(--lightFontCol);
+}
+.hero-aside{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+    height: 50%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5rem #FFF6EB;
+    }
+}
+
+/* -----About section----- */
+.about-section{
+    margin-top: 0;
+    height: 95vh;
+    background-color: var(--lightFontCol);
+    padding:2rem 5rem;
+}
+.about-header{
+    font-weight: 400;
+}
+/* -----Project section----- */
+ .project-section{
+    margin: 0;
+    height: 95vh;
+    background-color: #101010;
+    color: var(--lightFontCol);
+    padding: 2rem;
+ }
+ .project-container{
+    margin-top: 2rem;
+    display: flex;
+    height: 82vh;
+    width: 100%;    
+    gap: 2rem;
+    justify-content: space-evenly;
+ }
+ .project-card{
+    height: 100%;
+    width: 5%;
+    background-color: red;
+    transition: 1.5s;    
+ }
+ .expand-card{
+    background-color: blue;
+    width: 100%;
+ }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PROJECTS [
+    <!ELEMENT PROJECTS (PROJECT+)>
+    <!ELEMENT PROJECT (NAME, DESCRIPTION, LINK, IMAGE)>
+    <!ELEMENT NAME (#PCDATA)>
+    <!ELEMENT DESCRIPTION (#PCDATA)>
+    <!ELEMENT LINK (#PCDATA)>
+    <!ELEMENT IMAGE (#PCDATA)>
+]>
+<PROJECTS>
+    <PROJECT>
+        <NAME>Project 1</NAME>
+        <DESCRIPTION> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda
+            voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
+            consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
+        <LINK>www.google.com</LINK>
+        <IMAGE>../assets/AaronImage.jpeg</IMAGE>
+    </PROJECT>
+    <PROJECT>
+        <NAME>Project 1</NAME>
+        <DESCRIPTION> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda
+            voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
+            consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
+        <LINK>www.google.com</LINK>
+        <IMAGE>../assets/AaronImage.jpeg</IMAGE>
+    </PROJECT>
+</PROJECTS>
