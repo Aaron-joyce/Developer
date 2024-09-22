@@ -1,73 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazing Developer Here</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amazing Developer Here</title>
 
-    <link rel="stylesheet" href="Styles/mainStyle.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-</head>
-<body>
-<!--------------------------- Navbar --------------------------->
-    <nav>
-        <span class="navbar">
-            <a  href="#hero-section"><i class="ph-light ph-house-simple"></i></a>
+        <link rel="stylesheet" href="Styles/mainStyle.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <!-- Jquer CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--------------------------- Navbar --------------------------->
+        <nav>
+            <span class="navbar">
+                <a href="#hero-section"><i class="ph-thin ph-house-simple ph-icon"></i>
+                    <div>About</div>
+                </a>
+                <a href="#skills-section"><i class="ph-thin ph-gear ph-icon"></i>
+                    <div>Skills</div>
+                </a>
+                <a href="#project-section"><i class="ph-thin ph-folder-simple ph-icon"></i>
+                    <div>Projects</div>
+                </a>
+                <a href="#contact-section"><i class="ph-thin ph-chat-teardrop-text ph-icon"></i>
+                    <div>Contact</div>
+                </a>
+            </span>
+        </nav>
 
-            <a href="#about-section"><i class="ph-light ph-user-circle-check"></i></i></a>
-            <a href="#project-section"><i class="ph-light ph-folder-simple"></i></a>
-            <a><i class="ph-light ph-chat-teardrop-text"></i></a>
-        </span>
-    </nav>
+        <!--------------------------- Hero Section --------------------------->
+        <section class="hero-section" id="hero-section">
+            <main class="hero-main">
+                <h1>Aaron</h1>
+                <h3 class="hero-subheader">Programmer, Designer, Problem-Solver</h3>
+            </main>
+            <aside class="hero-aside">
+                <div class="profile-card">
+                    <h2 class="about-header">About Me</h2>
+                    <div class="img-container">
+                        <img src="assets/AaronImage.jpeg" draggable="false" class="profile-img">
+                    </div>
+                    <p class="about-text">
+                        A computer science background coupled with a hands-on approach to learning, allows me to explore various domains in tech, from software development to data analysis. I’m particularly interested in building innovative solutions that push the boundaries of what’s possible in today’s technological landscape.
+                    </p>
+                    <div class="social-container">
+                        <a class="socials-link" href="https://instagram.com" target="_blank"><i class="ph ph-instagram-logo ph-icon"></i></a>
+                        <a class="socials-link" href="https://linkedin.com" target="_blank"><i class="ph ph-linkedin-logo ph-icon"></i></a>
+                        <a class="socials-link" href="https://github.com/Aaron-joyce" target="_blank"><i class="ph ph-github-logo ph-icon"></i></a>
+                    </div>
+                </div>
+            </aside>
+        </section>
 
-<!--------------------------- Hero Section --------------------------->
-    <div class="hero-section" id="hero-section">
-        <main>
-            <div>
-                <h1>Hi, I am Aaron</h1>
-                <h2>Your new favourite developer</h2>
+        <!--------------------------- Section Break --------------------------->
+        <div class="section-break-div" id="skills-section" aria-hidden="true">
+            <img class="break-img" src="assets/stacked-waves-white-blue.png" aria-hidden="true">
+        </div>
+
+        <!--------------------------- Skiils Section --------------------------->
+        <section class="skills-section">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4 class="skill-heading">JavaScript</h4>
+                    <div class="bar-outer">
+                        <div class="bar-fill" id="fill-1"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-heading">HTML/CSS</h4>
+                    <div class="bar-outer">
+                        <div class="bar-fill" id="fill-2"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-heading">SQL</h4>
+                    <div class="bar-outer">
+                        <div class="bar-fill" id="fill-3"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-heading">Java</h4>
+                    <div class="bar-outer">
+                        <div class="bar-fill" id="fill-4"></div>
+                    </div>
+                </div>
             </div>
-            <h3>Keep Scrolling to know more</h3>
-        </main>  
-        <aside class="hero-aside">
-                <img src="assets/AaronImage.jpeg">
-        </aside>
-    </div>    
+        </section>
 
-    <!--------------------------- About Section --------------------------->
-    <div class="about-section" id="about-section">
-        <h2 class="about-header">About Me</h2>
-        <div class="about-sub-div">
-            <h4>Education</h4>
-                <ul class="about-ul">
-                    <strong><em><li class="edu-li">Bachelor of Science, Information Technology</li></em></strong>
-                    <li class="edu-li">St. Xaviers College (Autonomous), Mumbai University</li>
-                    <li class="edu-li">Mumbai, Maharashtra, India</li>
-                    <em><li class="edu-li">Jun 2023 - Apr 2026</li></em>
-                    <strong><li class="edu-li">CGPA: 9.16</li></strong>
-                </ul>
+        <!--------------------------- Section Break --------------------------->
+        <div class="section-break-div" id="project-section" aria-hidden="true">
+            <img class="break-img" src="assets/stacked-waves-blue-black.png" aria-hidden="true">
         </div>
-        <div class="about-sub-div">
-            <h4>Experience</h4>
-                <ul class="about-ul">
-                    <strong><em><li class="edu-li">Software Engineering Intern</li></em></strong>
-                    <li class="edu-li">ABC Technologies Ltd.</li>
-                    <li class="edu-li">Apr 2025 - Jun 2025</li>
-                    <li class="edu-li achievement-li">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan consequat dignissim. Fusce pellentesque enim id varius condimentum. Suspendisse potenti. In porta dolor ligula, at tristique nibh auctor vel. Nulla leo nisi, condimentum eget est.</li>
-                </ul>
-        </div>
-    </div>
 
-    <div class="project-section" id="project-section">
-        <h2>Projects</h2>
-        <div class="project-container">
-                <div class="project-card expand-card" draggable="false"></div>
-                <div class="project-card" draggable="false"></div>
-                <div class="project-card" draggable="false"></div>
-                <div class="project-card" draggable="false"></div>
+        <!--------------------------- Project Section --------------------------->
+        <section class="project-section" >
+            <h2 class="project-header">My Work</h2>
+            <p class="project-text">Click on a project card to see details</p>
+            <div class="project-container" id="project-container">
             </div>
+        </section>
+
+        <!--------------------------- Section Break --------------------------->
+        <div class="section-break-div" id="contact-section" aria-hidden="true">
+            <img class="break-img" src="assets/stacked-waves-black-white.png" aria-hidden="true">
         </div>
-    </div>
-    <script src="Scripts/mainScript.js"></script>
-</body>
+        <!--------------------------- Contact Section --------------------------->
+        <section class="contact-section">
+            <div class="form-container">
+                <h2 class="form-heading">Contact Me!</h2>
+                <form action="submit.php" method="post" class="contact-form">
+                    <div class="input-container">
+                        <label for="txt-name" class="txt-label">Name</label>
+                        <input type="text" class="txt-input" id="txt-name" name="txt-name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="txt-mail" class="txt-label">Mail</label>
+                        <input type="mail" class="txt-input" id="txt-mail" name="txt-mail" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="txt-msg" class="txt-label">Send a Message</label>
+                        <textarea id="txt-msg" class="txt-input" name="txt-msg" rows="5" cols="30"></textarea>
+                    </div>  
+                    <div style="text-align: center;">
+                        <input type="submit" value="submit" id="submit-btn">
+                    </div>
+                    <div id="error"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer><i class="ph-light ph-copyright ph-icon"></i>Aaron 2024</footer>
+        <script src="Scripts/mainScript.js"></script>
+    </body>
 </html>

@@ -14,14 +14,22 @@
             voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
             consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
         <LINK>www.google.com</LINK>
-        <IMAGE>../assets/AaronImage.jpeg</IMAGE>
+        <IMAGE>../assets/ProjectPic1.jpg</IMAGE>
     </PROJECT>
     <PROJECT>
-        <NAME>Project 1</NAME>
+        <NAME>Project 2</NAME>
         <DESCRIPTION> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda
             voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
             consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
         <LINK>www.google.com</LINK>
-        <IMAGE>../assets/AaronImage.jpeg</IMAGE>
+        <IMAGE>../assets/ProjectPic2.jpg</IMAGE>
+    </PROJECT>
+    <PROJECT>
+        <NAME>Project 3</NAME>
+        <DESCRIPTION> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda
+            voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
+            consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
+        <LINK>www.google.com</LINK>
+        <IMAGE>../assets/ProjectPic2.jpg</IMAGE>
     </PROJECT>
 </PROJECTS>
