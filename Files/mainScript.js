@@ -8,14 +8,13 @@ const navObserver = new IntersectionObserver((entries) =>
     $(".navbar")[0].classList.toggle('sticking', !entries[0].isIntersecting);
 });
 
-navObserver.observe(scrollwatch);  
-
 $(document).ready(function(){
     $.ajax({
         type:"GET",
-        url:"../Files/projects.xml",
+        url:"./Files/projects.xml",
         dataType:"xml",
         success:function(xml){
+            console.log("Projects file found!");
             let projects = []
             $(xml).find('PROJECT').each(function(){
                 const name = $(this).find('NAME').text();
@@ -31,7 +30,7 @@ $(document).ready(function(){
                 projects.forEach(project=>{
                     console.log(project.name);
                     $('#project-container').append(`
-                        <div class="project-card" style="background-image:url(${project.image}); ">
+                        <div class="project-card" style="background-image:url(${project.image});">
                             <div class="project-wrapper">
                                 <h2 class="project-name">${project.name}</h2>
                                 <div class="project-details">
@@ -43,14 +42,18 @@ $(document).ready(function(){
                 })
             }
 
+            console.log("before AddProject")
             addProjects();
+            navObserver.observe(scrollwatch);  
             $(".project-card").on('click', function() {
-                $(".project-card").removeClass('expand-card');
-                $(this).addClass('expand-card');
-            });
-            },
-        error:function(){
-            $('#movie-list').append("<li>Error loading movie data</li>'");
+            $(".project-card").removeClass('expand-card');
+            $(this).addClass('expand-card');
+});
+        },
+        error:function(xhr, request, error){
+            var err = eval("(" + xhr.responseText + ")");
+            console.log(err.Message);
+            $('#project-container').append("<h1>Error loading Projects data</h1>'");
         }
     })
 })

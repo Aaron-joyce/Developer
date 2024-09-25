@@ -14,7 +14,7 @@
             voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
             consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
         <LINK>www.google.com</LINK>
-        <IMAGE>../assets/ProjectPic1.jpg</IMAGE>
+        <IMAGE>./assets/ProjectPic1.jpg</IMAGE>
     </PROJECT>
     <PROJECT>
         <NAME>Project 2</NAME>
@@ -22,7 +22,7 @@
             voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
             consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
         <LINK>www.google.com</LINK>
-        <IMAGE>../assets/ProjectPic2.jpg</IMAGE>
+        <IMAGE>./assets/ProjectPic2.jpg</IMAGE>
     </PROJECT>
     <PROJECT>
         <NAME>Project 3</NAME>
@@ -30,6 +30,6 @@
             voluptate numquam repellat facere doloribus enim accusantium voluptatibus sunt
             consequatur? Saepe, iusto nostrum. Porro accusamus dolorum dolorem laborum. Ab, aut. </DESCRIPTION>
         <LINK>www.google.com</LINK>
-        <IMAGE>../assets/ProjectPic2.jpg</IMAGE>
+        <IMAGE>./assets/ProjectPic2.jpg</IMAGE>
     </PROJECT>
 </PROJECTS>

@@ -423,6 +423,60 @@ nav{
     background-color: var(--primaryAccent);
     color: var(--mainColLight);
 }
+
+/* ---------- Submit php ---------- */
+.response-section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-color: var(--mainColDark);
+}
+.response-card{
+    box-sizing: border-box;
+    background-color: var(--accentColLight);
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3rem var(--primaryAccent);
+    padding: 2rem 2rem;
+    h2{
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+.response-text{
+    margin: 2rem 0;
+    text-align: center;
+    p{
+    font-family: 'Quicksand';
+    font-size: 2.2rem;
+    display: inline;
+    }
+}
+.return-btn{
+    padding:2rem;
+    background-color: var(--primaryAccent);
+    border: none;
+    border-radius: 3rem;
+    border: 2px solid var(--primaryAccent);
+    a{
+        color: var(--mainColLight);
+        text-decoration: none;
+        font-size: 1.6rem;
+    }
+}
+.return-btn:active,.return-btn:hover{
+    background-color: var(--accentColLight);
+    a{
+        color: var(--mainColDark);
+    }
+}
 /* footer */
 footer{
     display: flex;
