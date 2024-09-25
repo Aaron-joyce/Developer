@@ -18,5 +18,38 @@
                 <button class="return-btn"><a href="../index.html">Back to My portfolio</a></button>
         </div>
     </section>
+<?php 
+    $servername = 'localhost';
+    $user = 'root';
+    $password = '';
+    $dbname = 'portfoliodb';
+
+    $conn = new mysqli($servername,$user,$password,$dbname);
+
+    if($conn->connect_error){
+        die("Connection Failed:".$conn->connect_error);
+    }
+    else{
+        echo "Connection Successfull";
+    }
+
+    $name = $_POST['txt-name'];
+    $mail = $_POST['txt-mail'];
+    $message = $_POST['txt-msg'];
+
+    $statement = $conn -> prepare("Insert into responses(name, email, message) values(?,?,?)");
+    $statement->bind_param("sss", $name, $mail, $message);
+
+    if($statement->execute()){
+        echo '<script>
+                console.log("record Added");
+            </script>';
+    }
+    else{
+        echo '<script>
+                console.log("error occurred");
+            </script>';
+    }
+    ?>
 </body>
 </html>

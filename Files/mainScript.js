@@ -14,7 +14,6 @@ $(document).ready(function(){
         url:"./Files/projects.xml",
         dataType:"xml",
         success:function(xml){
-            console.log("Projects file found!");
             let projects = []
             $(xml).find('PROJECT').each(function(){
                 const name = $(this).find('NAME').text();
@@ -28,7 +27,6 @@ $(document).ready(function(){
             function addProjects(){
                 $(`#project-container`).empty();
                 projects.forEach(project=>{
-                    console.log(project.name);
                     $('#project-container').append(`
                         <div class="project-card" style="background-image:url(${project.image});">
                             <div class="project-wrapper">
@@ -42,7 +40,6 @@ $(document).ready(function(){
                 })
             }
 
-            console.log("before AddProject")
             addProjects();
             navObserver.observe(scrollwatch);  
             $(".project-card").on('click', function() {
