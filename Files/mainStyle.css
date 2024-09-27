@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Globas CSS */
 :root{
-    --mainColLight:#fff;
-    --accentColLight:#f7f7f7;
-    --mainColDark:#101010;
+    --primaryCol:#fff;
+    --secondaryCol:#101010;
     --primaryAccent:#1c7ed6;
+    --themeIconCol: #ffd900;
 }
 *{
     padding: 0;
@@ -18,7 +18,7 @@ body{
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    background-color: var(--mainColLight);
+    background-color: var(--primaryCol);
 }
 
 /* -----Global selectors----- */
@@ -54,9 +54,10 @@ nav{
     gap: 0;
     background-color: #0f0f0fcc;
     backdrop-filter: blur(5px);
-    border: 2px solid var(--accentColLight);
+    border: 2px solid var(--darkModeIcon);
     div{
         display: none;
+
     }
     .ph-icon{
         display: block;
@@ -74,7 +75,7 @@ nav{
     transition: all .2s;
     z-index: 10;
     a{
-        color: var(--mainColLight);
+        color: var(--primaryCol);
         text-decoration: none;   
         font-style: normal;
         font-size: 1.8rem;
@@ -90,6 +91,18 @@ nav{
     }
 }
 
+/* theme Switch */
+#theme-switch{
+    height: 4rem;
+    width: 4rem;
+    background-color: inherit;
+    border: none;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* -----Hero section----- */
 .hero-background{
     position: absolute;
@@ -98,11 +111,11 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--mainColDark);
+    color: var(--secondaryCol);
     box-sizing: border-box;
     height: max-content;
-    background-color: var(--mainColLight);
-    color: var(--mainColDark);
+    background-color: var(--primaryCol);
+    color: var(--secondaryCol);
     flex-wrap: wrap;
     flex-shrink: 0;
     flex-basis: 50%;
@@ -135,7 +148,7 @@ nav{
     text-align: center;
 }
 .profile-card{
-    box-shadow: 0 0 2rem var(--mainColDark);
+    box-shadow: 0 0 2rem var(--secondaryCol);
     border-radius:2rem;
     display: flex;
     flex-direction: column;
@@ -145,8 +158,8 @@ nav{
     box-sizing: border-box;
     padding:2rem 2rem;
     gap: 2rem;
-    background-color: var(--accentColLight);
-    color: var(--mainColDark);
+    background-color: var(--darkModeIcon);
+    color: var(--secondaryCol);
     margin: 0 2rem;
 }
 .img-container{
@@ -164,7 +177,7 @@ nav{
     border-radius: 2rem;
 }
 .socials-link:link,.socials-link:visited{
-    color: var(--mainColDark);
+    color: var(--secondaryCol);
     text-decoration: none;
     font-size: 4rem;
     .ph-icon{
@@ -198,7 +211,7 @@ nav{
     h2{
         font-size: 4rem;
         margin-bottom: 2rem;
-        color: var(--accentColLight);
+        color: var(--darkModeIcon);
     }
 }
 .skill-heading{
@@ -220,7 +233,7 @@ nav{
     padding: 1.6rem;
     box-sizing: border-box;
     border-radius: 2rem;
-    background-color: var(--mainColLight);
+    background-color: var(--primaryCol);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,7 +245,7 @@ nav{
     border-radius: .9rem;
     height: 2rem;
     padding: .2rem;
-    box-shadow: 0 0 2rem var(--mainColDark);
+    box-shadow: 0 0 2rem var(--secondaryCol);
 }
 .bar-fill{
     background-color: var(--primaryAccent);
@@ -306,8 +319,8 @@ nav{
     justify-content: start;
     gap:1rem;
     box-sizing: border-box;
-    background-color: var(--mainColDark);
-    color: var(--mainColLight);
+    background-color: var(--secondaryCol);
+    color: var(--primaryCol);
 }
 .project-text{
     margin-bottom: 1rem;
@@ -331,7 +344,7 @@ nav{
     }
 }
 .expand-card{
-    background-color: var(--accentColLight);
+    background-color: var(--darkModeIcon);
     transition: all 1s;
     .project-details{
         display: block;
@@ -343,7 +356,7 @@ nav{
 .detail-text{
     width: 100%;
     height: 100%;
-    color: var(--accentColLight);
+    color: var(--darkModeIcon);
     font-family: 'Quicksand';
 }
 .project-wrapper{
@@ -361,11 +374,11 @@ nav{
     border-radius: 2rem;
     border: none;
     margin-top: 2rem;
-    color: var(--mainColLight);
+    color: var(--primaryCol);
 }
 .project-link-btn:hover{
-    color: var(--mainColLight);
-    background-color: var(--mainColDark);
+    color: var(--primaryCol);
+    background-color: var(--secondaryCol);
 }
 .project-link{
     color: inherit;
@@ -384,7 +397,7 @@ nav{
     justify-content: center;
 }
 .form-container{
-    box-shadow: 0 0 2rem var(--mainColDark);
+    box-shadow: 0 0 2rem var(--secondaryCol);
     padding: 2rem;
     width: 80%;
     max-width: 425px;
@@ -414,14 +427,14 @@ nav{
 #submit-btn{
     padding: 1rem 0 ;
     width: 50%;
-    background-color: var(--mainColLight);
+    background-color: var(--primaryCol);
     border: solid 2px var(--primaryAccent);
     border-radius: 1rem;
     font-size: 1.8rem;
 }
 #submit-btn:hover,#submit-btn:active{
     background-color: var(--primaryAccent);
-    color: var(--mainColLight);
+    color: var(--primaryCol);
 }
 
 /* ---------- Submit php ---------- */
@@ -433,11 +446,11 @@ nav{
     justify-content: center;
     box-sizing: border-box;
     padding: 0 2rem;
-    background-color: var(--mainColDark);
+    background-color: var(--secondaryCol);
 }
 .response-card{
     box-sizing: border-box;
-    background-color: var(--accentColLight);
+    background-color: var(--darkModeIcon);
     display: flex;
     width: fit-content;
     flex-direction: column;
@@ -466,16 +479,25 @@ nav{
     border-radius: 3rem;
     border: 2px solid var(--primaryAccent);
     a{
-        color: var(--mainColLight);
+        color: var(--primaryCol);
         text-decoration: none;
         font-size: 1.6rem;
     }
 }
 .return-btn:active,.return-btn:hover{
-    background-color: var(--accentColLight);
+    background-color: var(--darkModeIcon);
     a{
-        color: var(--mainColDark);
+        color: var(--secondaryCol);
     }
+}
+
+.error-msg{
+    visibility: hidden;
+    font-size: 2.2rem;
+    text-align: center;
+    color: red;
+    font-family: 'Quicksand';
+    font-weight: 600;
 }
 /* footer */
 footer{
@@ -488,7 +510,7 @@ footer{
         margin-right: 1rem;
     }
     font-weight: 300;
-    background-color: var(--mainColDark);
-    color: var(--mainColLight);
+    background-color: var(--secondaryCol);
+    color: var(--primaryCol);
     padding: 1rem;
 }

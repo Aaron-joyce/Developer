@@ -111,14 +111,14 @@
         <section class="contact-section">
             <div class="form-container">
                 <h2 class="form-heading">Contact Me!</h2>
-                <form action="Files/submit.php" method="post" class="contact-form">
+                <form id="contact-form" action="Files/submit.php" method="post" class="contact-form" onsubmit="validate(event)">
                     <div class="input-container">
                         <label for="txt-name" class="txt-label">Name</label>
                         <input type="text" class="txt-input" id="txt-name" name="txt-name" required>
                     </div>
                     <div class="input-container">
                         <label for="txt-mail" class="txt-label">Mail</label>
-                        <input type="mail" class="txt-input" id="txt-mail" name="txt-mail" required>
+                        <input type="email" class="txt-input" id="txt-mail" name="txt-mail" required>
                     </div>
                     <div class="input-container">
                         <label for="txt-msg" class="txt-label">Send a Message</label>
@@ -127,8 +127,8 @@
                     <div style="text-align: center;">
                         <input type="submit" value="submit" id="submit-btn">
                     </div>
-                    <div id="error"></div>
                 </form>
+                <p class="error-msg">!Please fill all the details correctly!</p>
             </div>
         </section>
 

@@ -7,6 +7,7 @@ const navObserver = new IntersectionObserver((entries) =>
 {
     $(".navbar")[0].classList.toggle('sticking', !entries[0].isIntersecting);
 });
+navObserver.observe(scrollwatch);  
 
 $(document).ready(function(){
     $.ajax({
@@ -41,11 +42,10 @@ $(document).ready(function(){
             }
 
             addProjects();
-            navObserver.observe(scrollwatch);  
             $(".project-card").on('click', function() {
-            $(".project-card").removeClass('expand-card');
-            $(this).addClass('expand-card');
-});
+                $(".project-card").removeClass('expand-card');
+                $(this).addClass('expand-card');
+            });
         },
         error:function(xhr, request, error){
             var err = eval("(" + xhr.responseText + ")");
@@ -55,4 +55,25 @@ $(document).ready(function(){
     })
 })
 
-// Project Section div changing
+function validate(event){
+    event.preventDefault();
+    var isvalid = true;
+    var mailpattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    if($("#txt-name").val() == ""|| $("#txt-name").val().length < 5){
+        isvalid = false;
+    }
+    if(!mailpattern.test($('#txt-mail').val())){
+        isvalid = false
+    }
+    if($('#txt-msg').val() == ''){
+        isvalid = false
+    }
+
+    if(isvalid){
+        $('#contact-form')[0].submit();
+        $('.error-msg').css('visibility','hidden')
+    }
+    else{
+        $('.error-msg').css('visibility','visible')
+    }
+}   
